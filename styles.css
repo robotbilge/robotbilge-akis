@@ -1,0 +1,82 @@
+:root{
+  --bg:#1A2345;
+  --bg2:#202A4F;
+  --card:#182145;
+  --text:#F5F7FF;
+  --muted:#a6b2d9;
+  --primary:#2F80ED;
+  --secondary:#F2C94C;
+  --success:#6FCF97;
+  --surface:#131a3a;
+  --border:#1f2750;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font:16px/1.5 "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
+img{max-width:100%;display:block}
+a{color:var(--text)}
+
+.container{max-width:1150px;margin:0 auto;padding:20px}
+
+.site-header{position:sticky;top:0;z-index:40;background:rgba(11,16,32,.6);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
+.nav-row{display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:40px;height:40px}
+.brand-name{font:700 20px "Poppins", sans-serif;letter-spacing:.3px}
+.nav{margin-left:auto;display:flex;gap:18px}
+.nav a{opacity:.9;text-decoration:none;font-weight:600}
+.nav a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:var(--text);font-size:22px}
+
+.bg-glow{position:fixed;inset:-20% -10% auto -10%;height:60vh;z-index:-1;
+  background:radial-gradient(600px 280px at 30% 20%, rgba(47,128,237,0.25), transparent 60%),
+             radial-gradient(500px 220px at 70% 10%, rgba(242,201,76,0.20), transparent 60%),
+             radial-gradient(400px 220px at 50% 60%, rgba(111,207,151,0.20), transparent 60%);}
+
+.hero{padding:60px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.hero-text h1{font:700 clamp(26px,2.5vw,42px) "Poppins", sans-serif;margin:0 0 12px}
+.hero-text .neon{color:var(--secondary);text-shadow:0 0 12px rgba(242,201,76,.45)}
+.hero-text p{color:var(--muted);margin:0 0 18px}
+.hero-ctas{display:flex;gap:12px;margin-top:10px}
+.btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,#11183a,#0f1532);color:var(--text);cursor:pointer;text-decoration:none;font-weight:700}
+.btn-primary{background:linear-gradient(180deg,rgba(47,128,237,.95),rgba(47,128,237,.65));border-color:transparent}
+.btn-ghost{background:transparent}
+.badges{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 0;padding:0;list-style:none}
+.badges li{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);border:1px solid var(--border);padding:8px 10px;border-radius:999px}
+
+.hero-art{position:relative}
+.hero-art .robot{filter:drop-shadow(0 12px 24px rgba(47,128,237,0.25))}
+.floating{position:absolute;animation:float 6s ease-in-out infinite}
+.chip1{top:10%; right:10%}
+.chip2{bottom:8%; left:6%}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.section{padding:40px 0}
+.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.panel{padding:16px;background:linear-gradient(180deg,#0f1633,#0b1026);border:1px solid var(--border);border-radius:var(--radius)}
+.stats{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap}
+.stat{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:12px;padding:10px 14px}
+.stat span{font:800 22px "Poppins", sans-serif;color:var(--success)}
+
+#tracks .track-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:18px}
+.track{background:linear-gradient(180deg,#0d1430,#0a1127);border:1px solid var(--border);border-radius:14px;padding:16px;transition:transform .2s, box-shadow .2s}
+.track:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(47,128,237,.18)}
+.track h3{margin:10px 0 6px;font:700 18px "Poppins", sans-serif}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:16px}
+.card{background:linear-gradient(180deg,#0e1430,#0b122a);border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font:700 18px "Poppins", sans-serif}
+.card p{color:var(--muted);margin:0 0 6px}
+.card .btn{align-self:flex-start}
+
+.contact-box{background:linear-gradient(180deg,#0e1430,#0b122a);border:1px solid var(--border);border-radius:16px;padding:16px}
+
+.site-footer{border-top:1px solid var(--border);padding:18px 0;background:rgba(11,16,32,.6)}
+
+@media (max-width:900px){
+  .nav{display:none}
+  .menu-btn{display:block;margin-left:auto}
+  .hero-grid,.two-col{grid-template-columns:1fr}
+}

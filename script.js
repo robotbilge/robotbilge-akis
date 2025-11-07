@@ -1,13 +1,24 @@
-function scrollToGames() {
-  const section = document.getElementById("oyunlar");
-  if (section) section.scrollIntoView({ behavior: "smooth" });
-}
+document.getElementById('year').textContent = new Date().getFullYear();
 
-function showGame(gameId) {
-  const oyunIsimleri = {
-    akisyap: "Akýþ Diyagramý Bulmacasý",
-    sqlav: "SQL Hazine Avý",
-    aiDedektif: "Yapay Zeka Dedektifi"
-  };
-  alert(`${oyunIsimleri[gameId]} bölümü yakýnda eklenecek! ??`);
+// demo activity events
+document.querySelectorAll('[data-activity]').forEach(b=>{
+  b.addEventListener('click', ()=> alert('Bu bir demo. GerÃ§ek oyunu burada baÅŸlatacaksÄ±n.'));
+});
+
+// sample download
+const dl = document.getElementById('downloadSample');
+if (dl) dl.addEventListener('click', e=>{
+  e.preventDefault();
+  alert('Ã–rnek bÃ¶lÃ¼m PDF baÄŸlantÄ±sÄ±nÄ± burada sunabilirsiniz.');
+});
+
+// mobile menu
+const menuBtn = document.getElementById('menuBtn');
+if (menuBtn){
+  menuBtn.addEventListener('click', ()=>{
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+    const visible = getComputedStyle(nav).display !== 'none';
+    nav.style.display = visible ? 'none' : 'flex';
+  });
 }
