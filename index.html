@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RobotBilge • Geleceğin Atölyesi</title>
-  <meta name="description" content="RobotBilge: Analiz, test, SQL, yapay zeka ve proje yönetimini eğlenceli oyunlarla öğreten modern çocuk sitesi." />
+  <title>Robot Bilge • Eğitim Atölyesi</title>
+  <meta name="description" content="Robot Bilge: Analiz, test, SQL, yapay zeka ve proje yönetimini eğlenceli oyunlarla öğreten modern çocuk sitesi." />
   <link rel="icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,12 +12,15 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="top"></div>
   <div class="bg-glow"></div>
+
   <header class="site-header">
     <div class="container nav-row">
       <div class="brand">
-        <img class="logo" src="assets/logo-robotbilge.svg" alt="RobotBilge Logo" />
-        <span class="brand-name">RobotBilge</span>
+        <img class="logo" src="assets/logo-robotbilge.svg" alt="Robot Bilge Logo" />
+        <!-- Marka metni tıklanınca sayfanın en başına gider -->
+        <a href="#top" class="brand-name" aria-label="Robot Bilge Ana Sayfa" style="text-decoration:none">Robot Bilge</a>
       </div>
       <nav class="nav">
         <a href="#about">Hakkında</a>
@@ -26,19 +29,19 @@
         <a href="#book">Kitap</a>
         <a href="#contact">İletişim</a>
       </nav>
-      <button id="menuBtn" class="menu-btn" aria-label="Menü">☰</button>
+      <button id="menuBtn" class="menu-btn" aria-label="Menü" aria-expanded="false">☰</button>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main">
+    <section class="hero" id="hero">
       <div class="container hero-grid">
         <div class="hero-text">
           <h1>
             Analiz, test, SQL, yapay zeka ve proje yönetimi konularını
             <span class="neon">eğlenceli oyunlarla</span> öğrenmeye hazır mısın?
           </h1>
-          <p>8–16 yaş için hazırlanan teknoloji atölyesi: görevler, roket hızında mini oyunlar ve gerçek hayattan problem çözme.</p>
+          <p>8–12 yaş için hazırlanan teknoloji atölyesi: görevler, roket hızında mini oyunlar ve gerçek hayattan problem çözme.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#activities">Oyunlara Başla</a>
             <a class="btn btn-ghost" href="#book">Kitabı İncele</a>
@@ -60,8 +63,8 @@
     <section id="about" class="section">
       <div class="container two-col">
         <div>
-          <h2>RobotBilge nedir?</h2>
-          <p>RobotBilge, çocukların teknolojiye sadece bakan değil üreten tarafta olmalarını hedefler. Hikâye temelli öğrenme ile akış diyagramları, veri, algoritma ve test kültürünü oyunlaştırır.</p>
+          <h2>Robot Bilge kimdir?</h2>
+          <p>Robot Bilge, çocukların teknolojiye sadece bakan değil üreten tarafta olmalarını hedefler. Hikâye temelli öğrenme ile akış diyagramları, veri, algoritma ve test kültürünü oyunlaştırır.</p>
           <div class="stats">
             <div class="stat"><span>26</span> Görev</div>
             <div class="stat"><span>18</span> Bilgi Kutusu</div>
@@ -137,7 +140,7 @@
       <div class="container two-col">
         <div>
           <h2>Kitap</h2>
-          <p><strong>Bartu’nun Bulut Operasyonu: Rüya Yönetim Sistemi</strong> — Hikâye, bilgi kutuları ve etkileşimlerle sistem düşüncesi.</p>
+          <p><strong>Bartu’nun Büyük Bulut Operasyonu: Rüya Yönetim Sistemi</strong> — Hikâye, bilgi kutuları ve etkileşimlerle sistem düşüncesi.</p>
           <a class="btn btn-ghost" href="#" id="downloadSample">Örnek Bölüm (PDF)</a>
         </div>
         <div class="panel">
@@ -149,7 +152,7 @@
     <section id="contact" class="section">
       <div class="container contact-box">
         <h2>İletişim</h2>
-        <p>E-posta: <a href="mailto:info@robotbilge.com">info@robotbilge.com</a></p>
+        <p>E-posta: <a href="mailto:info@robotbilge.com">bilgi@robotbilge.com</a></p>
         <p>Web: <a href="https://www.robotbilge.com">robotbilge.com</a></p>
       </div>
     </section>
@@ -157,7 +160,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> RobotBilge • 8–16 yaş için teknoloji atölyesi.</small>
+      <small>© <span id="year"></span> Robot Bilge Akademi, 8–12 yaş arası çocuklar için tasarlanmış STEM odaklı bir öğrenme evrenidir. Çevrim içi deneyim ile her oyun çocukların analitik düşünme becerisini geliştirir. </small>
     </div>
   </footer>
 
